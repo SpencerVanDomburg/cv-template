@@ -20,8 +20,8 @@ h2 {
 }
 
 h3 {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -30,7 +30,7 @@ p {
 }
 
 ul {
-  list-style-type: none;
+  margin-top: 0px;
   padding: 0;
 }
 
@@ -152,8 +152,32 @@ ul .stars {
   padding-left: 8px;
 }
 
+/* bullets*/
+#work-experience ul li{
+  padding-top: 0px;
+  position: relative;
+  padding-left: 20px; /* Adjust as needed */
+  margin-bottom: 0px; /* Adjust as needed */
+}
+
+#work-experience ul li::before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  color: var(--primary-color); /* Change the color to your preferred color */
+  font-size: 2.5em; /* Adjust the font size as needed */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #education {
   padding-left: 8px;
+}
+
+#period {
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
